@@ -56,15 +56,39 @@
 		A2EC19AF27C286B0002D22DD /* NekokichiKadai2 */ = {
 			isa = PBXGroup;
 			children = (
+				A2EC19C427C286C4002D22DD /* Model */,
+				A2EC19C527C286C8002D22DD /* View */,
+				A2EC19C627C286CB002D22DD /* Controller */,
 				A2EC19B027C286B0002D22DD /* AppDelegate.swift */,
 				A2EC19B227C286B0002D22DD /* SceneDelegate.swift */,
-				A2EC19B427C286B0002D22DD /* ViewController.swift */,
-				A2EC19B627C286B0002D22DD /* Main.storyboard */,
 				A2EC19B927C286B1002D22DD /* Assets.xcassets */,
 				A2EC19BB27C286B1002D22DD /* LaunchScreen.storyboard */,
 				A2EC19BE27C286B1002D22DD /* Info.plist */,
 			);
 			path = NekokichiKadai2;
+			sourceTree = "<group>";
+		};
+		A2EC19C427C286C4002D22DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2EC19C527C286C8002D22DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2EC19B627C286B0002D22DD /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2EC19C627C286CB002D22DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2EC19B427C286B0002D22DD /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

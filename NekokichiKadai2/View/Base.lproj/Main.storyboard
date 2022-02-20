@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NekokichiKadai2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-bf-WHW">
+                                <rect key="frame" x="124" y="422.5" width="166" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="35d-UB-Lp7"/>
+                                    <constraint firstAttribute="width" secondItem="XvN-bf-WHW" secondAttribute="height" multiplier="166:51" id="EBJ-T6-E2d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-5z-OMI">
+                                <rect key="frame" x="129.5" y="80" width="155" height="213"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="YU1-b9-7cY">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="85"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IC5-22-WmF">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZf-2V-rVC">
+                                                <rect key="frame" x="0.0" y="51" width="155" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="hGe-69-szS"/>
+                                        </constraints>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rug-Aq-VHR">
+                                        <rect key="frame" x="12" y="118" width="131" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z7-H3-12Q">
+                                        <rect key="frame" x="44" y="182" width="67" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IL1-h0-47i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QuA-5z-OMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="gD6-RB-yGx"/>
+                            <constraint firstItem="QuA-5z-OMI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHo-Na-Zup"/>
+                            <constraint firstItem="XvN-bf-WHW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pkN-yI-iAJ"/>
+                            <constraint firstItem="XvN-bf-WHW" firstAttribute="top" secondItem="QuA-5z-OMI" secondAttribute="bottom" constant="129.5" id="snq-a4-hC9"/>
+                            <constraint firstItem="XvN-bf-WHW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xOl-ZT-Bhi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculatedResultLabel" destination="XvN-bf-WHW" id="19H-tl-A2G"/>
+                        <outlet property="fourArithmeticOperationsSegment" destination="rug-Aq-VHR" id="yuJ-77-Ug0"/>
+                        <outlet property="inputNumField1" destination="IC5-22-WmF" id="F5X-h8-cfm"/>
+                        <outlet property="inputNumField2" destination="xZf-2V-rVC" id="ul6-eZ-NhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
