@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet weak private var inputNumField1: UITextField!
     @IBOutlet weak private var inputNumField2: UITextField!
@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateButton(_ sender: UIButton) {
+        
     }
     
 }
