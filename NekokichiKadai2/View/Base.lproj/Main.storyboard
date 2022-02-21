@@ -16,16 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-bf-WHW">
-                                <rect key="frame" x="124" y="422.5" width="166" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="35d-UB-Lp7"/>
-                                    <constraint firstAttribute="width" secondItem="XvN-bf-WHW" secondAttribute="height" multiplier="166:51" id="EBJ-T6-E2d"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-5z-OMI">
                                 <rect key="frame" x="129.5" y="80" width="155" height="85"/>
                                 <subviews>
@@ -50,10 +40,12 @@
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rug-Aq-VHR">
-                                <rect key="frame" x="141.5" y="210" width="131" height="32"/>
+                                <rect key="frame" x="151.5" y="210" width="111" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="+"/>
+                                    <segment title="-"/>
+                                    <segment title="×"/>
+                                    <segment title="÷"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z7-H3-12Q">
@@ -67,6 +59,15 @@
                                     <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hc8-cn-6Br"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-bf-WHW">
+                                <rect key="frame" x="111" y="438" width="192" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XvN-bf-WHW" secondAttribute="height" multiplier="187:20" id="fO3-uj-Td5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -76,8 +77,8 @@
                             <constraint firstItem="QuA-5z-OMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="J97-8u-kz4"/>
                             <constraint firstItem="3Z7-H3-12Q" firstAttribute="top" secondItem="rug-Aq-VHR" secondAttribute="bottom" constant="50" id="bAB-OX-Z3d"/>
                             <constraint firstItem="rug-Aq-VHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="na9-Dg-S29"/>
-                            <constraint firstItem="XvN-bf-WHW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pkN-yI-iAJ"/>
-                            <constraint firstItem="XvN-bf-WHW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xOl-ZT-Bhi"/>
+                            <constraint firstItem="XvN-bf-WHW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rqX-vf-aAQ"/>
+                            <constraint firstItem="XvN-bf-WHW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yHd-Bk-5n0"/>
                             <constraint firstItem="3Z7-H3-12Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zPe-KQ-Zai"/>
                         </constraints>
                     </view>

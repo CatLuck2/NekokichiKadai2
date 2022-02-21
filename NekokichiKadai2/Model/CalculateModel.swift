@@ -43,9 +43,9 @@ struct CalculateMultiplicationModel: CalculateModelProtocol {
 
 struct CalculateDivisionModel: CalculateModelProtocol {
     func getCaculatedResult(values: [Int]) -> Double {
-        var result: Double! = Double(values[0])
+        var result: Double = Double(values[0])
         for i in 1..<values.count {
-            result = (result / Double(values[i]))
+            result = result / Double(values[i])
         }
         return Double(result)
     }
