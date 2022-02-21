@@ -14,8 +14,8 @@ protocol CalculateModelProtocol {
 struct CalculateAdditionModel: CalculateModelProtocol {
     func getCaculatedResult(values: [Int]) -> Double {
         var result: Int = values[0]
-        for i in 1..<values.count {
-            result += values[i]
+        for key in 1..<values.count {
+            result += values[key]
         }
         return Double(result)
     }
@@ -24,8 +24,8 @@ struct CalculateAdditionModel: CalculateModelProtocol {
 struct CalculateSubtractionModel: CalculateModelProtocol {
     func getCaculatedResult(values: [Int]) -> Double {
         var result: Int = values[0]
-        for i in 1..<values.count {
-            result -= values[i]
+        for key in 1..<values.count {
+            result -= values[key]
         }
         return Double(result)
     }
@@ -34,8 +34,8 @@ struct CalculateSubtractionModel: CalculateModelProtocol {
 struct CalculateMultiplicationModel: CalculateModelProtocol {
     func getCaculatedResult(values: [Int]) -> Double {
         var result: Int = values[0]
-        for i in 1..<values.count {
-            result *= values[i]
+        for key in 1..<values.count {
+            result *= values[key]
         }
         return Double(result)
     }
@@ -44,8 +44,8 @@ struct CalculateMultiplicationModel: CalculateModelProtocol {
 struct CalculateDivisionModel: CalculateModelProtocol {
     func getCaculatedResult(values: [Int]) -> Double {
         var result: Double = Double(values[0])
-        for i in 1..<values.count {
-            result = result / Double(values[i])
+        for key in 1..<values.count {
+            result /= Double(values[key])
         }
         return Double(result)
     }
