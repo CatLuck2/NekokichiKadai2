@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="QuA-5z-OMI">
-                                <rect key="frame" x="129.5" y="80" width="155" height="213"/>
+                                <rect key="frame" x="129.5" y="80" width="155" height="85"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="YU1-b9-7cY">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="85"/>
@@ -47,32 +47,38 @@
                                             <constraint firstAttribute="width" constant="155" id="hGe-69-szS"/>
                                         </constraints>
                                     </stackView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rug-Aq-VHR">
-                                        <rect key="frame" x="12" y="118" width="131" height="32"/>
-                                        <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z7-H3-12Q">
-                                        <rect key="frame" x="44" y="182" width="67" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IL1-h0-47i"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rug-Aq-VHR">
+                                <rect key="frame" x="141.5" y="210" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z7-H3-12Q">
+                                <rect key="frame" x="173.5" y="291" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3Z7-H3-12Q" secondAttribute="height" multiplier="67:31" id="Axi-l2-Cyy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hc8-cn-6Br"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QuA-5z-OMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="gD6-RB-yGx"/>
-                            <constraint firstItem="QuA-5z-OMI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHo-Na-Zup"/>
+                            <constraint firstItem="rug-Aq-VHR" firstAttribute="top" secondItem="QuA-5z-OMI" secondAttribute="bottom" constant="45" id="4k4-Zd-bjh"/>
+                            <constraint firstItem="QuA-5z-OMI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8kH-p0-iik"/>
+                            <constraint firstItem="QuA-5z-OMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="J97-8u-kz4"/>
+                            <constraint firstItem="3Z7-H3-12Q" firstAttribute="top" secondItem="rug-Aq-VHR" secondAttribute="bottom" constant="50" id="bAB-OX-Z3d"/>
+                            <constraint firstItem="rug-Aq-VHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="na9-Dg-S29"/>
                             <constraint firstItem="XvN-bf-WHW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pkN-yI-iAJ"/>
-                            <constraint firstItem="XvN-bf-WHW" firstAttribute="top" secondItem="QuA-5z-OMI" secondAttribute="bottom" constant="129.5" id="snq-a4-hC9"/>
                             <constraint firstItem="XvN-bf-WHW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xOl-ZT-Bhi"/>
+                            <constraint firstItem="3Z7-H3-12Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zPe-KQ-Zai"/>
                         </constraints>
                     </view>
                     <connections>

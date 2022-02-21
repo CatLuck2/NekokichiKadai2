@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Int
-}
+//protocol CalculateModelProtocol {
+//    func CaculateResult<T>(values: [T]) -> T
+//}
 
 struct CalculateAdditionModel {
     func getCaculatedResult(values: [Int]) -> Int {
-        var result: Int = values[0]
+        var result = values[0]
         for i in 1..<values.count {
             result += values[i]
         }
@@ -42,11 +42,11 @@ struct CalculateMultiplicationModel {
 }
 
 struct CalculateDivisionModel {
-    func getCaculatedResult(values: [Int]) -> Int {
-        var result: Int = values[0]
+    func getCaculatedResult(values: [Int]) -> Double {
+        var result: Double! = Double(values[0])
         for i in 1..<values.count {
-            result /= values[i]
+            result = (result / Double(values[i]))
         }
-        return result
+        return Double(result)
     }
 }
