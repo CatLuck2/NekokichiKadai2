@@ -20,38 +20,24 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func calculateButton(_ sender: UIButton) {
+        var calculateModel: CalculateModelProtocol!
         switch fourArithmeticOperationsSegment.selectedSegmentIndex {
         case 0:
-            var calculateModel = CalculateAdditionModel()
-            let result = calculateModel.getCaculatedResult(values: [
-                Int(inputNumField1.text ?? "") ?? 0,
-                Int(inputNumField2.text ?? "") ?? 0
-            ])
-            calculatedResultLabel.text = "\(result)"
+            calculateModel = CalculateAdditionModel()
         case 1:
-            var calculateModel = CalculateSubtractionModel()
-            let result = calculateModel.getCaculatedResult(values: [
-                Int(inputNumField1.text ?? "") ?? 0,
-                Int(inputNumField2.text ?? "") ?? 0
-            ])
-            calculatedResultLabel.text = "\(result)"
+            calculateModel = CalculateSubtractionModel()
         case 2:
-            var calculateModel = CalculateMultiplicationModel()
-            let result = calculateModel.getCaculatedResult(values: [
-                Int(inputNumField1.text ?? "") ?? 0,
-                Int(inputNumField2.text ?? "") ?? 0
-            ])
-            calculatedResultLabel.text = "\(result)"
+            calculateModel = CalculateMultiplicationModel()
         case 3:
-            var calculateModel = CalculateDivisionModel()
-            let result = calculateModel.getCaculatedResult(values: [
-                Int(inputNumField1.text ?? "") ?? 0,
-                Int(inputNumField2.text ?? "") ?? 0
-            ])
-            calculatedResultLabel.text = "\(result)"
+            calculateModel = CalculateDivisionModel()
         default:
             break
         }
+        let result = calculateModel.getCaculatedResult(values: [
+            Int(inputNumField1.text ?? "") ?? 0,
+            Int(inputNumField2.text ?? "") ?? 0
+        ])
+        calculatedResultLabel.text = "\(result)"
     }
     
     private func setUpSegmentedControl() {

@@ -7,41 +7,41 @@
 
 import UIKit
 
-//protocol CalculateModelProtocol {
-//    func CaculateResult<T>(values: [T]) -> T
-//}
+protocol CalculateModelProtocol {
+    func getCaculatedResult(values: [Int]) -> Double
+}
 
-struct CalculateAdditionModel {
-    func getCaculatedResult(values: [Int]) -> Int {
-        var result = values[0]
+struct CalculateAdditionModel: CalculateModelProtocol {
+    func getCaculatedResult(values: [Int]) -> Double {
+        var result: Int = values[0]
         for i in 1..<values.count {
             result += values[i]
         }
-        return result
+        return Double(result)
     }
 }
 
-struct CalculateSubtractionModel {
-    func getCaculatedResult(values: [Int]) -> Int {
+struct CalculateSubtractionModel: CalculateModelProtocol {
+    func getCaculatedResult(values: [Int]) -> Double {
         var result: Int = values[0]
         for i in 1..<values.count {
             result -= values[i]
         }
-        return result
+        return Double(result)
     }
 }
 
-struct CalculateMultiplicationModel {
-    func getCaculatedResult(values: [Int]) -> Int {
+struct CalculateMultiplicationModel: CalculateModelProtocol {
+    func getCaculatedResult(values: [Int]) -> Double {
         var result: Int = values[0]
         for i in 1..<values.count {
             result *= values[i]
         }
-        return result
+        return Double(result)
     }
 }
 
-struct CalculateDivisionModel {
+struct CalculateDivisionModel: CalculateModelProtocol {
     func getCaculatedResult(values: [Int]) -> Double {
         var result: Double! = Double(values[0])
         for i in 1..<values.count {
