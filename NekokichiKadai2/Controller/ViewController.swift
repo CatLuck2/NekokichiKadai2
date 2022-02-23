@@ -15,28 +15,22 @@ final class ViewController: UIViewController {
     @IBOutlet weak private var calculatedResultLabel: UILabel!
 
     @IBAction func calculateButton(_ sender: UIButton) {
-        guard inputNumField2.text != "0" else {
+        let value1 = Int(inputNumField1.text ?? "") ?? 0
+        let value2 = Int(inputNumField2.text ?? "") ?? 0
+
+        guard value2 != 0 else {
             calculatedResultLabel.text = "割る数には0以外を入力してください"
             return
         }
 
-        var calculateModel: CalculateModelProtocol!
-        switch fourArithmeticOperationsSegment.selectedSegmentIndex {
-        case 0:
-            calculateModel = CalculateAdditionModel()
-        case 1:
-            calculateModel = CalculateSubtractionModel()
-        case 2:
-            calculateModel = CalculateMultiplicationModel()
-        case 3:
-            calculateModel = CalculateDivisionModel()
-        default:
-            break
-        }
-        let result = calculateModel.getCaculatedResult(values: [
-            Int(inputNumField1.text ?? "") ?? 0,
-            Int(inputNumField2.text ?? "") ?? 0
-        ])
+        let calculateModel: CalculateModelProtocol = [
+            CalculateAdditionModel(),
+            CalculateSubtractionModel(),
+            CalculateMultiplicationModel(),
+            CalculateDivisionModel()
+        ][fourArithmeticOperationsSegment.selectedSegmentIndex]
+
+        let result = calculateModel.calculate(values: [value1, value2])
         calculatedResultLabel.text = "\(result)"
     }
 }

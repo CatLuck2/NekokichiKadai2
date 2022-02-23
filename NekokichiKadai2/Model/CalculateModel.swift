@@ -8,44 +8,48 @@
 import UIKit
 
 protocol CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double
+    func calculate(values: [Int]) -> Double
 }
 
 struct CalculateAdditionModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
+    func calculate(values: [Int]) -> Double {
+        guard !values.isEmpty else { return 0 }
         var result: Int = values[0]
-        for key in 1..<values.count {
-            result += values[key]
+        for value in values.dropFirst() {
+            result += value
         }
         return Double(result)
     }
 }
 
 struct CalculateSubtractionModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
+    func calculate(values: [Int]) -> Double {
+        guard !values.isEmpty else { return 0 }
         var result: Int = values[0]
-        for key in 1..<values.count {
-            result -= values[key]
+        for value in values.dropFirst() {
+            result -= value
         }
         return Double(result)
     }
 }
 
 struct CalculateMultiplicationModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
+    func calculate(values: [Int]) -> Double {
+        guard !values.isEmpty else { return 0 }
         var result: Int = values[0]
-        for key in 1..<values.count {
-            result *= values[key]
+        for value in values.dropFirst() {
+            result *= value
         }
         return Double(result)
     }
 }
 
 struct CalculateDivisionModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
+    func calculate(values: [Int]) -> Double {
+        guard !values.isEmpty else { return 0 }
         var result: Double = Double(values[0])
-        for key in 1..<values.count {
-            result /= Double(values[key])
+        for value in values.dropFirst() {
+            result /= Double(value)
         }
         return Double(result)
     }
