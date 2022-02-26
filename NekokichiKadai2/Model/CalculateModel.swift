@@ -8,12 +8,21 @@
 import UIKit
 
 protocol CalculateModelProtocol {
+    /*
+     副作用のあるメソッドは動詞、ないメソッドは名詞
+     計算結果を返すだけなので、getは不要
+     func caculatedResult(values: [Int]) -> Double
+     */
     func getCaculatedResult(values: [Int]) -> Double
 }
 
 struct CalculateAdditionModel: CalculateModelProtocol {
     func getCaculatedResult(values: [Int]) -> Double {
         var result: Int = values[0]
+        /*
+         dropFirst()
+         配列の最初の値を除外する
+         */
         for key in 1..<values.count {
             result += values[key]
         }
