@@ -13,49 +13,54 @@ protocol CalculateModelProtocol {
      計算結果を返すだけなので、getは不要
      func caculatedResult(values: [Int]) -> Double
      */
-    func getCaculatedResult(values: [Int]) -> Double
+    func caculatedResult(values: [Double]) -> String
 }
 
 struct CalculateAdditionModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
-        var result: Int = values[0]
+    func caculatedResult(values: [Double]) -> String {
+        // 引数が空の場合を考慮してなかった
+        guard !values.isEmpty else { return String(0.0) }
+        var result: Double = values[0]
         /*
          dropFirst()
          配列の最初の値を除外する
          */
-        for key in 1..<values.count {
-            result += values[key]
+        for value in values.dropFirst() {
+            result += value
         }
-        return Double(result)
+        return String(result)
     }
 }
 
 struct CalculateSubtractionModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
-        var result: Int = values[0]
-        for key in 1..<values.count {
-            result -= values[key]
+    func caculatedResult(values: [Double]) -> String {
+        guard !values.isEmpty else { return String(0.0) }
+        var result: Double = values[0]
+        for value in values.dropFirst() {
+            result -= value
         }
-        return Double(result)
+        return String(result)
     }
 }
 
 struct CalculateMultiplicationModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
-        var result: Int = values[0]
-        for key in 1..<values.count {
-            result *= values[key]
+    func caculatedResult(values: [Double]) -> String {
+        guard !values.isEmpty else { return String(0.0) }
+        var result: Double = values[0]
+        for value in values.dropFirst() {
+            result *= value
         }
-        return Double(result)
+        return String(result)
     }
 }
 
 struct CalculateDivisionModel: CalculateModelProtocol {
-    func getCaculatedResult(values: [Int]) -> Double {
-        var result: Double = Double(values[0])
-        for key in 1..<values.count {
-            result /= Double(values[key])
+    func caculatedResult(values: [Double]) -> String {
+        guard !values.isEmpty else { return String(0.0) }
+        var result: Double = values[0]
+        for value in values.dropFirst() {
+            result /= Double(value)
         }
-        return Double(result)
+        return String(result)
     }
 }

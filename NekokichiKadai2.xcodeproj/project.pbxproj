@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A240327727C9B1AD00F4088B /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240327627C9B1AD00F4088B /* OtherViewController.swift */; };
+		A240327927C9B1EA00F4088B /* OtherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A240327827C9B1EA00F4088B /* OtherModel.swift */; };
 		A2EC19B127C286B0002D22DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EC19B027C286B0002D22DD /* AppDelegate.swift */; };
 		A2EC19B327C286B0002D22DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EC19B227C286B0002D22DD /* SceneDelegate.swift */; };
 		A2EC19B527C286B0002D22DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EC19B427C286B0002D22DD /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A240327627C9B1AD00F4088B /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		A240327827C9B1EA00F4088B /* OtherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherModel.swift; sourceTree = "<group>"; };
 		A2EC19AD27C286B0002D22DD /* NekokichiKadai2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NekokichiKadai2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EC19B027C286B0002D22DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2EC19B227C286B0002D22DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A240327527C9B19100F4088B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A240327627C9B1AD00F4088B /* OtherViewController.swift */,
+				A240327827C9B1EA00F4088B /* OtherModel.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		A2EC19A427C286B0002D22DD = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 				A2EC19C427C286C4002D22DD /* Model */,
 				A2EC19C527C286C8002D22DD /* View */,
 				A2EC19C627C286CB002D22DD /* Controller */,
+				A240327527C9B19100F4088B /* Other */,
 				A2EC19B027C286B0002D22DD /* AppDelegate.swift */,
 				A2EC19B227C286B0002D22DD /* SceneDelegate.swift */,
 				A2EC19B927C286B1002D22DD /* Assets.xcassets */,
@@ -186,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A240327727C9B1AD00F4088B /* OtherViewController.swift in Sources */,
 				A2EC19B527C286B0002D22DD /* ViewController.swift in Sources */,
 				A2EC19B127C286B0002D22DD /* AppDelegate.swift in Sources */,
 				A2EC19C827C28D5E002D22DD /* CalculateModel.swift in Sources */,
+				A240327927C9B1EA00F4088B /* OtherModel.swift in Sources */,
 				A2EC19B327C286B0002D22DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

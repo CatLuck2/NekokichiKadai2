@@ -15,13 +15,15 @@ final class ViewController: UIViewController {
     @IBOutlet weak private var calculatedResultLabel: UILabel!
 
     @IBAction func calculateButton(_ sender: UIButton) {
+        let value1 = Double(inputNumField1.text ?? "") ?? 0
+        let value2 = Double(inputNumField2.text ?? "") ?? 0
         // 除算以外でも、inputNumField2が０なら、警告が出てしまう
         // 数値以外が入力された場合を考慮していない
         // 早期に値をチェックせず、必要のない処理を実行してしまう
-        guard inputNumField2.text != "0" else {
-            calculatedResultLabel.text = "割る数には0以外を入力してください"
-            return
-        }
+//        guard inputNumField2.text != "0" else {
+//            calculatedResultLabel.text = "割る数には0以外を入力してください"
+//            return
+//        }
 
         /*
          配列の添字でモデルを自動決定
@@ -42,14 +44,17 @@ final class ViewController: UIViewController {
         case 2:
             calculateModel = CalculateMultiplicationModel()
         case 3:
-            calculateModel = CalculateDivisionModel()
+            if value2 != 0 {
+                calculateModel = CalculateDivisionModel()
+            } else {
+                calculatedResultLabel.text = "割る数には0以外を入力してください"
+                return
+            }
         default:
             break
         }
-        let result = calculateModel.getCaculatedResult(values: [
-            Int(inputNumField1.text ?? "") ?? 0,
-            Int(inputNumField2.text ?? "") ?? 0
-        ])
-        calculatedResultLabel.text = "\(result)"
+        // Int型で渡しており、Model側でDoubleの変換の手間が発生
+//        let result = calculateModel.caculatedResult(values: [value1, value2])
+        calculatedResultLabel.text = calculateModel.caculatedResult(values: [value1, value2])
     }
 }
